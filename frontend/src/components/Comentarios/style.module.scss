@@ -1,0 +1,14 @@
+.section{
+    width: 90%;
+    margin: 0 auto;
+
+    margin-bottom: 1rem;
+    .comentarios{
+        padding: 1rem;
+        text-align: left;
+        border-radius: 5px;
+
+        color: var(--color-white);
+        background-color: var(--color-darkblue2);
+    }
+}
