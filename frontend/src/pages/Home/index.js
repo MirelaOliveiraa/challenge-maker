@@ -1,5 +1,7 @@
 import React from "react";
-import style from "./style.module.scss";
+
+import style from "./styleMobile.module.scss";
+import Acess from "../../components/Acess";
 import Comentarios from "../../components/Comentarios/index.js";
 
 import profile1 from "../../assets/profile-1.jpg";
@@ -7,16 +9,18 @@ import profile2 from "../../assets/profile-2.jpg";
 import profile3 from "../../assets/profile-3.jpg";
 
 import logo from "../../assets/logo.svg";
+import iconPhone from "../../assets/icon-phone.svg";
+import iconEmail from "../../assets/icon-email.svg";
 import iconAnyFile from "../../assets/icon-any-file.svg";
 import iconSecurity from "../../assets/icon-security.svg";
 import iconLocation from "../../assets/icon-location.svg";
-import iconEmail from "../../assets/icon-email.svg";
-import iconPhone from "../../assets/icon-phone.svg";
 import iconAcess from "../../assets/icon-access-anywhere.svg";
 import iconCollaboration from "../../assets/icon-collaboration.svg";
 
 import illustrationIntro from "../../assets/illustration-intro.png";
 import illustrationStayProductive from "../../assets/illustration-stay-productive.png";
+
+import { FiInstagram, FiTwitter, FiFacebook } from "react-icons/fi";
 
 const Home = () => {
   return (
@@ -40,39 +44,44 @@ const Home = () => {
           family, and co-workers
         </h3>
         <button className={style.buttonStart}>Get Started</button>
-        <div className={style.text}>
-          <img src={iconAcess} className={style.iconAcess} />
-          <h2> Access your files, anywhere</h2>
-          <span>
-            The ability to use a smartphone, tablet, or computer to access your
-            account means your files follow you everywhere.
-          </span>
+
+        <div classNmae={style.tecnologias}>
+          <div className={style.text}>
+            <img src={iconAcess} className={style.iconAcess} />
+            <h2> Access your files, anywhere</h2>
+            <span>
+              The ability to use a smartphone, tablet, or computer to access
+              your account means your files follow you everywhere.
+            </span>
+          </div>
+          <div className={style.text}>
+            <img src={iconSecurity} className={style.iconAcess} />
+            <h2>Security you can trust</h2>
+            <span>
+              2-factor authentication and user-controlled encryption are just a
+              couple of the security features we allow to help secure your
+              files.
+            </span>
+          </div>
+          <div className={style.text}>
+            <img src={iconCollaboration} className={style.iconAcess} />
+            <h2>Real-time collaboration</h2>
+            <span>
+              Securely share files and folders with friends, family and
+              colleagues for live collaboration. No email attachments required.
+            </span>
+          </div>
+          <div className={style.text}>
+            <img src={iconAnyFile} />
+            <h2>Store any type of file</h2>
+            <span>
+              Whether you're sharing holidays photos or work documents, Fylo has
+              you covered allowing for all file types to be securely stored and
+              shared
+            </span>
+          </div>
         </div>
-        <div className={style.text}>
-          <img src={iconSecurity} className={style.iconAcess} />
-          <h2>Security you can trust</h2>
-          <span>
-            2-factor authentication and user-controlled encryption are just a
-            couple of the security features we allow to help secure your files.
-          </span>
-        </div>
-        <div className={style.text}>
-          <img src={iconCollaboration} className={style.iconAcess} />
-          <h2>Real-time collaboration</h2>
-          <span>
-            Securely share files and folders with friends, family and colleagues
-            for live collaboration. No email attachments required.
-          </span>
-        </div>
-        <div className={style.text}>
-          <img src={iconAnyFile} />
-          <h2>Store any type of file</h2>
-          <span>
-            Whether you're sharing holidays photos or work documents, Fylo has
-            you covered allowing for all file types to be securely stored and
-            shared
-          </span>
-        </div>
+
         <div className={style.text}>
           <img src={illustrationStayProductive} className={style.imgInicial} />
           <h2>Stay productive, wherever you are</h2>
@@ -146,24 +155,45 @@ const Home = () => {
       </div>
 
       <div className={style.card2}>
+        <Acess>
+          <div className={style.acess}>
+            <h4 className={style.titulo}>Get early acess today</h4>
+            <p>
+              It only takes a minute to sing up and our free starter tier is
+              extremely generous. If you have any questions, our suppont tem
+              woulld be happy to help you.
+            </p>
+            <input
+              className={style.inputEmail}
+              placeholder="example@fylo.com"
+              type="text"
+            />
+            <button className={style.cadastro}>Get Started For Free</button>
+          </div>
+        </Acess>
+
         <img src={logo} />
         <div className={style.sla}>
           <div className={style.info}>
-            <img src={iconLocation} />
             <h6>
+              <img src={iconLocation} />
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua
             </h6>
           </div>
 
           <div className={style.info}>
-            <img src={iconPhone} />
-            <h6> +1-543-123-4567</h6>
+            <h6>
+              <img src={iconPhone} />
+              +1-543-123-4567
+            </h6>
           </div>
 
           <div className={style.info}>
-            <img src={iconEmail} />
-            <h6>example@fylo.com</h6>
+            <h6>
+              <img src={iconEmail} />
+              example@fylo.com
+            </h6>
           </div>
 
           <div className={style.contato}>
@@ -177,6 +207,11 @@ const Home = () => {
             <h5>Terms</h5>
             <h5>Privacy</h5>
           </div>
+        </div>
+        <div className={style.redesSociais}>
+          <FiFacebook className={style.icons} />
+          <FiTwitter className={style.icons} />
+          <FiInstagram className={style.icons} />
         </div>
       </div>
     </section>
