@@ -1,4 +1,25 @@
-# challenge-maker
+#challenge-maker
+
+#### Sobre: 
+Challenge desenvolvido usando ReactJs!
+
+## 
+
+#### Tecnologias:
+Frontend: React, CSS Modules (com sass)<br />
+Backend: Json-Server
+
+##
+
+#### Instalação:
+> cd backend <br />
+> npx json-server --watch db.json <br />
+> cd .. <br />
+> cd frontend <br />
+> npm install <br />
+> npm start <br />
+##
+###Interfaces:
 
 ![image](https://user-images.githubusercontent.com/80600474/145264955-bce799ed-8280-4ae8-b976-92ef872665e7.png)
 
